@@ -1,0 +1,21 @@
+button {
+    background-color:hsl(158, 36%, 37%);
+    border-color: rgba(60, 128, 103, .1);
+    border-radius: 15px;
+    height: 60px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+
+    img {
+        background-color: rgba(00, 00, 00, .0);
+        margin-right: 2%;
+        height: 1.45rem;
+    }
+}
+button:hover {
+    background-color: hsl(158, 52%, 19%);
+    border-color: rgba(60, 128, 103, .1);
+    cursor: pointer;
+}

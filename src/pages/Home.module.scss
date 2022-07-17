@@ -1,0 +1,112 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: hsl(0, 0%, 100%);
+
+    .box {
+        padding: 3%;
+        background-color:  hsl(30, 38%, 92%);
+    
+        .template_grid {
+            max-width: 1400px;
+            margin: auto;
+            display: grid;
+            grid-template-areas: 
+            "image text"
+            "image text";
+            
+            @media (max-width: 992px) {
+                display: grid;
+                grid-template-areas: 
+                "image"
+                "text";
+            }
+    
+            .template_img {
+                grid-area: image;
+                img {
+                    object-fit: cover;
+                    height: 100%;
+
+                    @media (max-width: 992px) {
+                        width: 100%;
+                        height: 363px;
+                    }
+                }
+            }
+    
+            .template_text {
+                grid-area: text;
+                display: flex;
+                flex-direction: column;
+                padding: 5%;
+                width: 100%;
+        
+                h2 {
+                    font-family: "Montserrat", sans-serif;
+                    color: hsl(228, 12%, 48%);
+                    letter-spacing: 1rem;
+                    padding-bottom: 10%;
+                }
+        
+                h1 {
+                    font-family: "Fraunces", serif;
+                    font-size: 4rem;
+                    padding-bottom: 10%;
+
+                    @media (max-width: 992px) {
+                        font-size: 2rem;
+                    }
+                }
+        
+                h3 {
+                    font-family: "Montserrat", sans-serif;
+                    color: hsl(228, 12%, 48%);
+                    font-size: 1.57rem;
+                    line-height: 3rem;
+                    padding-bottom: 10%;
+
+                    @media (max-width: 992px) {
+                        font-size: 1rem;
+                        line-height: 1.65rem;
+                    }
+                }
+        
+                .price {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding-bottom: 10%;
+                    
+        
+                    .price_first {
+                        font-family: "Fraunces", serif;
+                        font-size: 4rem;
+                        font-weight: 700;
+                        color: hsl(158, 36%, 37%);
+                        margin-right: 8%;
+
+                        @media (max-width: 992px) {
+                            font-size: 2rem;
+                        }
+                    }
+        
+                    .price_second {
+                        font-family: "Montserrat", sans-serif;
+                        color: hsl(228, 12%, 48%);
+                        font-size: 1rem;
+                        text-decoration: line-through;
+                        font-weight: bold;
+
+                        @media (max-width: 992px) {
+                            font-size: 0.85rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
